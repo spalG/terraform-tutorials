@@ -1,0 +1,26 @@
+The 4 Essential Commands
+You will run these sequential commands in your terminal for almost every project:
+terraform init: Prepares your directory and downloads the required provider plugins.
+terraform plan: Performs a dry run to show you exactly what will be created, modified, or deleted.
+terraform apply: Executes the changes and provisions the infrastructure.
+terraform destroy: Tears down and deletes all resources managed by that configuration file.
+
+
+Standard File Layout
+In a basic or intermediate project, you should organize your root directory into specific files based on their functional roles:
+providers.tf: Contains the terraform {} block, required versions, and configurations for upstream APIs (AWS, Azure, Docker).
+main.tf: Houses the core resources, data sources, and architecture components you want to build.
+variables.tf: Declares configurable input parameters so you do not hardcode values inside your infrastructure blocks.
+outputs.tf: Exposes useful information post-deployment, such as server public IP addresses or database connection strings.
+terraform.tfvars: Stores the actual secret keys or values assigned to your variables. Never commit this file to Git.
+
+my-terraform-project/
+├── .terraform/            # Auto-generated: Holds downloaded provider plugins (git ignored)
+├── .terraform.lock.hcl   # Auto-generated: Locks specific plugin versions for security
+├── main.tf               # Core resources (VPCs, EC2 instances, security groups)
+├── providers.tf          # Cloud provider declarations and credentials
+├── variables.tf          # Input variable definitions
+├── outputs.tf            # Return values to display in the terminal
+├── terraform.tfvars      # Local parameter values (e.g., region = "us-east-1")
+├── .gitignore            # Excludes state files, plugin directories, and secrets
+└── terraform.tfstate     # Auto-generated: Current state mapping file (git ignored)
