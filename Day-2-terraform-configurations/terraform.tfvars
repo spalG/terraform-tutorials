@@ -1,0 +1,5 @@
+vpc_tag           = "my-vpc"
+vpc_cidr_block    = "10.0.0.0/16"
+public_cidr_block = "10.0.1.0/24"
+subnet_tag        = "public-subnet"
+availability_zone = "us-east-1a"
