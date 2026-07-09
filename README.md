@@ -40,6 +40,9 @@ Today I connected Terraform to my AWS account and successfully tested the setup.
 terraform init
 terraform plan
 terraform apply
+terraform apply -auto-approve
+terraform destroy
+terraform destroy -auto-approve
 ```
 
 ### Outcome
