@@ -102,3 +102,33 @@ AWS           → What ACTUALLY EXISTS
 ### Outcome
 
 ✅ Understood Terraform state, infrastructure drift, state refresh, and how Terraform detects manually deleted AWS resources.
+
+## Day 4 - Remote State and State Locking
+
+Configured Terraform to use an **Amazon S3 backend** for remote state storage and enabled **state locking** to prevent concurrent infrastructure changes.
+
+### What I Learned
+
+* Configured an S3 backend for storing the Terraform state file remotely.
+* Enabled state locking using DynamoDB.
+* Understood the benefits of remote state for team collaboration.
+* Learned the difference between `terraform init`, `terraform init -reconfigure`, and `terraform init -migrate-state`.
+* Verified that Terraform stores and manages state in the remote backend.
+
+### Commands Used
+
+```bash
+terraform init
+terraform init -reconfigure
+terraform init -migrate-state
+terraform plan
+terraform apply
+terraform destroy
+terraform state list
+terraform state show <resource_name>
+```
+
+### Outcome
+
+✅ Successfully configured remote state with Amazon S3, enabled state locking, and learned how to initialize, reconfigure, and migrate Terraform backends.
+
