@@ -115,6 +115,7 @@ my-terraform-project/
 ├── providers.tf
 ├── variables.tf
 ├── outputs.tf
+├── backend.tf (s3 with locking)
 ├── terraform.tfvars
 ├── .gitignore
 └── terraform.tfstate (stored remotely in S3)
